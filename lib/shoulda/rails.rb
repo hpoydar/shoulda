@@ -14,4 +14,4 @@ root = if defined?(Rails.root) && Rails.root
        end
 
 # load in the 3rd party macros from vendorized plugins and gems
-Shoulda.autoload_macros root, File.join("vendor", "{plugins,gems}", "*")
+Shoulda.autoload_macros(root, File.join("vendor", "{plugins,gems}", "*")) unless root.nil?
