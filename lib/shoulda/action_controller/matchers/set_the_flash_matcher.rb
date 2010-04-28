@@ -60,7 +60,7 @@ module Shoulda # :nodoc:
         end
 
         def flash
-          @controller.response.session['flash']
+          @controller.request.session['flash']
         end
 
         def expectation
